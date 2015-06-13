@@ -3,7 +3,7 @@
 
 2.用终端进入该文件夹目录下
 
-3.输入命令： `sudo docker build -t <image name>` . 等待构建
+3.输入命令： `sudo docker build -t <image name> .` 等待构建
 
 4.屏幕输出 Successfully built 4d35ffbf1d48 表示构建成功
 
