@@ -7,7 +7,7 @@
 
 4.屏幕输出 Successfully built 4d35ffbf1d48 表示构建成功
 
-5.终端输入 `sudo docker run -p 8080:80 <image name>` 启动IBOS项目
+5.终端输入 `sudo docker run -p 8080:80 <image name>` 就会自动启动IBOS项目
 
 6.打开浏览器输入 ip:8080/upload 进入安装目录
 
