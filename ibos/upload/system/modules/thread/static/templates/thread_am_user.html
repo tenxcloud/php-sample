@@ -1,0 +1,37 @@
+<td width="22">
+    <% if((status == 0 && !isDesignee) || status == 4) { %> 
+    <a href="javascript:;" class="am-checkbox disabled"></a>
+    <% } else if(status == 2 || status == 3) {%>
+    <a href="javascript:;" class="am-checkbox checked" title="完成"></a>
+    <% } else { %>
+    <a href="javascript:;" class="am-checkbox" title="完成"></a>
+    <% } %>
+</td>
+<td>
+    <a href="<%= detailUrl %>" target="_blank" class="xcm"><%= subject %></a>
+    <div class="fss">
+        <% if(key == "chargeuid") { %>
+            发起人
+        <% } else if(key === "designeeuid") { %>
+            安排给
+        <% } %>
+        &nbsp;
+        <%= designeeName %>
+        &nbsp;
+        <%= formattedStartTime %> -- <%= formattedEndTime %>
+        <% if(outDate) { %>
+            <i class="om-am-warning mls" title="已过期"></i>
+        <% } %>
+    </div>
+</td>
+<td width="110">
+    <% if(status == 0) { %> 
+    <span class="pull-right am-tag am-tag-unread">未读</span>
+    <% } else if(status == 1) { %>
+    <span class="pull-right am-tag am-tag-ongoing">进行中</span>
+    <% } else if(status == 2 || status == 3) { %>
+    <span class="pull-right am-tag am-tag-finish">已完成</span>
+    <% } else if(status == 4) { %>
+    <span class="pull-right am-tag am-tag-canceled">已取消</span>
+    <% } %>
+</td>

@@ -1,0 +1,42 @@
+<!-- 主线详细信息 -->
+<form action="javascript:;">
+	<div class="mb">
+		<input type="text" name="subject" class="am-publish-s-input" value="<%= subject %>">
+	</div>
+	<div class="row mb">
+		<div class="span4">
+			<input type="text" name="chargeuid" id="thread_chargeuid" value="<%= chargeuid %>" placeholder="负责人">
+			<div id="thread_chargeuid_box" style="display: none;"></div>
+		</div>
+		<div class="span4">
+			<div class="input-group datepicker" id="thread_starttime">
+				<span class="input-group-addon">从</span>
+				<a href="javascript:;" class="datepicker-btn"></a>
+				<input type="text" class="datepicker-input" name="starttime" value="<%= starttime %>" placeholder="何时开始？">
+			</div>
+		</div>
+		<div class="span4">
+			<div class="input-group datepicker" id="thread_endtime">
+				<span class="input-group-addon">至</span>
+				<a href="javascript:;" class="datepicker-btn"></a>
+				<input type="text" class="datepicker-input" name="endtime" value="<%= endtime %>" placeholder="何时结束？">
+			</div>
+		</div>
+	</div>
+	<div class="row mb">
+		<div class="span12">
+			<input type="text" name="participantuid" id="thread_participantuid" value="<%= participantuid %>" placeholder="参与人">
+			<div id="thread_participantuid_box" style="display: none;"></div>
+		</div>
+	</div>
+	<div class="mb">
+		<script type="text/plain" id="thread_editor" class="bds">
+			<%= description %>
+		</script>
+	</div>
+	<div class="clearfix">
+		<div class="pull-right">
+			<button type="button" class="btn btn-primary">保存</button>
+		</div>
+	</div>
+</form>

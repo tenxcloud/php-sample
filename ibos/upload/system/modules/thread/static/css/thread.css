@@ -1,0 +1,194 @@
+/**
+ * Description
+ * Module
+ * @author 		inaki
+ * @version 	$Id: thread.css 4948 2015-03-27 10:37:00Z gzljj $
+ */
+
+/**
+ * 列表页相关样式
+ */
+.o-th-user,
+.o-th-star,
+.o-th-users,
+
+.o-th-clip{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align: -5px;
+	background: url(../image/thread.png) no-repeat;
+}
+.o-th-star{ background-position: -20px 0; }
+.o-th-users{ background-position: -40px 0; }
+
+.nav .active .o-th-user{ background-position: 0 -20px; }
+.nav .active .o-th-star{ background-position: -20px -20px; }
+.nav .active .o-th-users{ background-position: -40px -20px; }
+
+.o-th-clip{ background-position: -40px -160px; }
+
+.o-cnmark-unread,
+.o-cnmark-ongoing,
+.o-cnmark-ended{
+	position: absolute; right: 0; top: 0; width: 60px; height: 60px; background: url(../image/thread.png) no-repeat; 
+}
+.o-cnmark-unread{ background-position: 0 -40px; }
+.o-cnmark-ongoing{ background-position: -60px -40px; }
+.o-cnmark-ended{ background-position: -120px -40px; }
+
+.o-th-plus,
+.o-th-phone{ display: inline-block; width: 60px; height: 60px; background: url(../image/thread.png) no-repeat; vertical-align: middle; }
+.o-th-plus{ background-position: 0 -100px; }
+.o-th-plus:hover{ background-position: -60px -100px; }
+.o-th-phone{ background-position: -120px -100px; }
+.o-th-phone:hover{ background-position: -180px -100px; }
+
+.o-th-crown{ display: inline-block; width: 24px; height: 24px; background: url(../image/thread.png) no-repeat 0 -160px; }
+
+.o-th-email-readed,
+.o-th-email-unread{ display: inline-block; width: 40px; height: 40px; background: url(../image/thread_email.png) no-repeat; vertical-align: middle; }
+.o-th-email-readed{ background-position: -40px 0; }
+
+/* 简洁搜索框 */
+.sp-search-box{ position: relative; }
+.sp-search-box .sp-search-input{
+	border-radius: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.sp-search-box .o-ol16-search{ position: absolute; top: 12px; right: 16px; }
+
+.am-publish-s-input{ border: 2px solid #DADFE6; padding: 18px 9px; font-size: 16px; }
+
+.amp-bar.amp-bar-wd{ width: 170px; } /* without datetimepicker */
+
+
+.thread-list{ min-height: 400px; margin-left: -20px; }
+.thread-item{
+	border-radius: 4px;
+	float: left;
+	position: relative;
+	margin: 20px 0 0 20px;
+	padding: 18px;
+	width: 320px;
+	height: 140px;
+	border: 1px solid #DADFE6;
+	cursor: pointer;
+}
+.thread-item:hover{ border-top: 2px solid #3497DB; padding-top: 17px; }
+.thread-item:hover h4 a{ color: #3497DB; }
+
+.thread-item h4{ margin: 0 0 20px; color: #58585C; }
+.thread-item .media .media-body{ margin-top: 20px; }
+.thread-item .media .media-body strong{ font-size: 20px; }
+.thread-item .media .label{ padding-top: 2px; padding-bottom: 2px; }
+.thread-item .o-cnmark-unread{ right: -1px; top: -1px; }
+.thread-item-opbar{ border-top-right-radius: 4px; position: absolute; right: 0; top: 0; display: none; padding: 15px 18px; background-color: #FFF; }
+.thread-item:hover .thread-item-opbar{ display: block; }
+.thread-item.thread-item-editable:hover .o-cnmark-unread{ top: 1px; right: 0; }
+
+.thread-item .o-sl16-user,
+.thread-item .o-sl16-msg,
+.thread-item .o-sl16-clock,
+.thread-item .o-slr16-clock{ vertical-align: -2px; }
+
+
+/**
+ * 查看页相关样式
+ */
+.o-thrd-ok,
+.o-thrd-loop{ display: inline-block; width: 32px; height: 32px; background: url(../image/thread.png) no-repeat; }
+.o-thrd-ok{ background-position: -140px 0; }
+.o-thrd-loop{ background-position: -180px 0; }
+
+.thrd-cb{}
+.thrd-cb-hd{ padding: 10px 20px; }
+.thrd-cb-hd > h1{display: inline-block; font-size: 20px; color: #58585C; font-weight: 700; margin: 0; }
+.thrd-cb-hd > a{ display: inline-block; margin-left: 10px; }
+.thrd-cb-hd > a .caret{ vertical-align: middle; }
+.thrd-cb-bd{ margin-bottom: 20px; padding: 0 20px 20px; line-height: 30px; }
+.thrd-cb-ft{ padding: 10px 20px 20px; }
+.thrd-cb-ft .progress{ margin-bottom: 0; }
+.thrd-cb-btn{ margin-left: 20px; font-size: 20px; }
+.thrd-cb-btn .o-thrd-ok,
+.thrd-cb-btn .o-thrd-loop{ vertical-align: -8px; }
+
+.thrd-et .nav-skid{ padding-left: 10px; padding-right: 10px; border-top: 1px solid #DADFE5; background-color: #F8F8F8; }
+
+
+/* 覆盖任务的部分样式 */
+#thread_assignment .am-publish-box{ padding-bottom: 0; background-color: transparent; }
+#thread_assignment .am-publish{ z-index: 2; }
+#thread_assignment .am-publish-toggle{
+	-webkit-transition: top .2s;
+	-o-transition: top .2s;
+	transition: top .2s;
+	top: 50px;
+	z-index: 1;
+}
+#thread_assignment .am-publish-toggle:hover{ top: 80px; }
+#thread_assignment .am-publish-box.open .am-publish-dt .am-publish-toggle{ top: auto; }
+
+
+.thrd-filter-sets .btn-group{ float: left; }
+.thrd-filter-sets .btn-group .btn:first-child{ border-top-left-radius: 0; border-bottom-left-radius: 0; margin-left: -1px; width: 100px; }
+.thrd-filter-sets .btn-group:first-child .btn:first-child{  border-radius: 4px 0 0 4px; margin-left: -1px; }
+
+.thrd-tab-content{ min-height: 200px; }
+.thrd-table-wrap{ margin-left: 40px; }
+
+/* Member info table*/
+.thrd-mi-table{ }
+.thrd-mi-table td{ padding: 20px 20px 10px; width: 25%; border-left: 1px solid #DADFE6; border-bottom: 1px solid #DADFE6; background-color: #F9FBFF; text-align: center; }
+.thrd-mi-table td:first-child{ border-left: 0 none; }
+.thrd-mi-table td strong{ color: #3497DB; font-size: 30px; }
+.thrd-mi-table td p{ color: #B2C0D1; }
+
+.thrd-mi-list{ margin-left: -8px; }
+.thrd-mi-list > li{ position: relative; padding-left: 8px; padding-right: 8px; }
+.thrd-mi-list > li .o-th-crown{ position: absolute; right: 4px; top: 36px; }
+
+
+/* 包括文件、审批、邮件在内的一系列 dataTable 样式 */
+table.dataTable thead th,
+table.dataTable thead td{ border-bottom: 1px solid #EBEFF6; }
+table.dataTable tbody th,
+table.dataTable tbody td{ height: 40px; }
+
+table.dataTable .row-opbar,
+table.dataTable tr:hover .row-date{ display: none; }
+table.dataTable tr:hover .row-opbar{ display: block; }
+
+table.dataTable tr .cell-has-att{ padding-left: 0; padding-right: 0; }
+
+.thrd-feed-list{ margin: 0 20px 0 60px; }
+.thrd-feed-list > li{ padding: 10px 0; border-bottom: 1px solid #EBEFF6; }
+.thrd-feed-list > li .media > .pull-left{ margin-right: 20px; }
+
+
+/**
+ * 主线 -- 动态
+ */
+.o-pb-face,
+.o-pb-image{ display: inline-block; width: 30px; height: 30px; background: url(../image/thread_feed.png) no-repeat; }
+
+.o-pb-face:hover,
+.o-pb-face.active{ background-position: -30px 0; }
+.o-pb-image{ background-position: -60px 0; }
+.o-pb-image:hover,
+.o-pb-image.active{ background-position: -90px 0; }
+
+/* 动态评论样式 */
+.thrd-feed-comment{ padding: 20px 20px 0 20px; }
+/*.thrd-feed-comment .cmt{ margin-left: 60px; margin-right: 20px; }*/
+.thrd-feed-comment .cmt-item{ padding-top: 20px; padding-bottom: 20px; }
+.thrd-feed-comment .cmt-body{ margin-left: 80px; }
+.thrd-feed-comment .cmt-sub .cmt-body{ margin-left: 50px; }
+
+/**
+ * 主线 -- 首页widget
+ */
+.thread-percent{ text-align:right }
+
+.am-publish-dt{ background-color: #FFFDFA; border-bottom: 1px solid #EBEFF6 }

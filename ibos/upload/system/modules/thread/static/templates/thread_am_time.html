@@ -1,0 +1,40 @@
+<td width="22">
+    <% if((status == 0 && !isDesignee) || status == 4) { %> 
+    <a href="javascript:;" class="am-checkbox disabled"></a>
+    <% } else if(status == 2 || status == 3) {%>
+    <a href="javascript:;" class="am-checkbox checked" title="完成"></a>
+    <% } else { %>
+    <a href="javascript:;" class="am-checkbox" title="完成"></a>
+    <% } %>
+</td>
+<td width="36">
+    <span class="avatar-circle avatar-circle-small">
+        <img src="<%= chargeAvatar %>">
+    </span>
+</td>
+<td>
+    <a href="<%= detailUrl %>" target="_blank" class="xcm"><%= subject %></a>
+    <div class="fss">
+        <%= designeeName %> 安排给 <%= chargeName %>
+        <% if(outDate) { %>
+            <i class="om-am-warning mls" title="已过期"></i>
+        <% } %>
+    </div>
+</td>
+<td width="110">
+    <!--
+    <div>
+        <a href="javascript:;" class="o-edit"></a>
+        <a href="javascript:;" class="o-trash mlm"></a>
+    </div>
+    -->
+    <% if(status == 0) { %> 
+    <span class="pull-right am-tag am-tag-unread">未读</span>
+    <% } else if(status == 1) { %>
+    <span class="pull-right am-tag am-tag-ongoing">进行中</span>
+    <% } else if(status == 2 || status == 3) { %>
+    <span class="pull-right am-tag am-tag-finish">已完成</span>
+    <% } else if(status == 4) { %>
+    <span class="pull-right am-tag am-tag-canceled">已取消</span>
+    <% } %>
+</td>

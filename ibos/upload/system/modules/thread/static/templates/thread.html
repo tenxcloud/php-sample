@@ -1,0 +1,63 @@
+<!-- 主线列表项 -->
+<h4>
+	<a href="<%= detailUrl %>" title="<%= subject %>"><%= subjectCut %></a>
+</h4>
+<div class="media">
+	<a href="#" class="avatar-circle pull-left">
+		<img src="<%= chargeAvatar %>" alt="<%= charge %>">
+	</a>
+	<div class="media-body">
+		<div class="mbs">
+			<%= charge || "未指定" %>
+			<% if (isCharge) { %>
+				<span class="label label-warning mls">负责</span>
+			<% } %>
+			<strong class="pull-right"><%= finishCount %>/<%= totalCount %></strong>
+		</div>
+		<div>
+			<div class="progress">
+				<div class="progress-bar" style="width: <%= totalCount == "0" ? "0" : finishCount * 100 / totalCount %>%"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix">
+	<div class="pull-left">
+		<span>
+			<i class="o-sl16-user"></i>
+			<%= memberCount %>
+		</span>
+		<span class="ml">
+			<i class="o-sl16-msg"></i>
+			<%= feedCount %>
+		</span>
+		<% if(timeleft >= 2) { %>
+		<span class="ml">
+			<i class="o-sl16-clock"></i>
+			<%= timeleft %>
+		</span>
+		<% } else { %>
+		<span class="ml xcr">
+			<i class="o-slr16-clock"></i>
+			<%= timeleft %>
+		</span>
+		<% } %>
+	</div>
+	<div class="pull-right">
+		<a href="javascript:;" class="<%= isAttention ? 'o-g16-gstar' : 'o-g16-star' %>"></a>
+		<span class="fss mls"><%= time %></span>
+	</div>
+</div>
+<% if(!isReaded) { %>
+	<span class="o-cnmark-unread" title="未读"></span>
+<% } %>
+<% if(editAble || delAble) { %>
+	<div class="thread-item-opbar">
+		<% if(editAble) { %>
+			<a href="javascript:;" title="编辑" class="o-edit"></a>
+		<% } %>
+		<% if(delAble) { %>
+			<a href="javascript:;" title="删除" class="o-trash mlm"></a>
+		<% } %>
+	</div>
+<% } %>
